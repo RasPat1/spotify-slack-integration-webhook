@@ -1,0 +1,53 @@
+# config variables
+property channelName : "#music"
+property webhookURL : "https://hooks.slack.com/services/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"
+property emojiName : "musical_note"
+property possibleAppList : {"Spotify", "iTunes", "Rdio"}
+property installedAppList : {"Spotify"}
+property chosenApp : "Spotify"
+
+set installedAppList to {}
+
+# globals
+property userName : "The Real Rasesh Guam Rashmi Patel"
+property theName : ""
+
+on replace_chars(this_text, search_string, replacement_string)
+	set AppleScript's text item delimiters to the search_string
+	set the item_list to every text item of this_text
+	set AppleScript's text item delimiters to the replacement_string
+	set this_text to the item_list as string
+	set AppleScript's text item delimiters to ""
+	return this_text
+end replace_chars
+
+
+# content
+tell application "Spotify"
+	set current_track to null
+	set current_artist to null
+	set current_album to null
+	
+	repeat until application "Spotify" is not running
+		if player state is playing then
+			set track_name to name of current track
+			set track_artist to artist of current track
+			set track_album to album of current track
+			
+			if track_name ≠ current_track then
+				set current_track to name of current track
+				set current_artist to artist of current track
+				set current_album to album of current track
+				
+				set message to current_track & " -  " & current_artist & " - " & userName
+				set encodedMessage to my replace_chars(message, "\"", "\\\"")
+				
+				#				do shell script "curl -X POST --data-urlencode payload={\"channel\": \"#music\", \"username\": \"nowplaying\", \"attachments\": [ { \"fallback\": \"$USERNAME is now playing: " & encodedMessage & "\", \"pretext\": \"$USERNAME is now playing:\", \"text\": \"" & encodedMessage & "\", \"color\": \"#7CD197\"} ], \"icon_emoji\": \":musical_note:\"} https://hooks.slack.com/services/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"
+				do shell script "curl -X POST --data-urlencode 'payload={\"channel\": \"" & channelName & "\", \"text\": \"" & encodedMessage & "\", \"icon_emoji\": \":" & emojiName & ":\"}' " & webhookURL
+			end if
+			
+			delay 5
+		end if
+	end repeat
+	
+end tell
