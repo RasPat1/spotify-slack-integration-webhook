@@ -18,8 +18,3 @@ It's really fun to share what you're listening to in real time.  This is a littl
 curl -s https://raw.githubusercontent.com/RasPat1/spotify-slack-integration-webhook/master/slack-spotify.scpt.txt | osascript - <YOUR_WEBHOOK> <NAME>
 ```
 4) Ask users to substitute their name and run the command in a terminal.
-
-
-```
-git clone git@github.com:RasPat1/spotify-slack-integration-webhook.git && cd spotify-slack-integration-webhook && osascript slack-spotify.scpt [YOUR-WEBHOOK] [YOUR USERNAME]
-```
