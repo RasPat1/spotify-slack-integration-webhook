@@ -59,12 +59,12 @@ end script
 on run argv
     if (count of argv) > 0 then
         tell myScript
-            set its userName to item 1 of argv
+            set its to webhookURL item 1 of argv
         end tell
     end if
     if (count of argv) > 1 then
         tell myScript
-            set its webhookURL to item 2 of argv
+            set its userName to item 2 of argv
         end tell
     end if
     if (count of argv) > 2 then
