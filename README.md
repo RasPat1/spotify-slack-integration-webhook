@@ -1,11 +1,17 @@
 Publish Spotify songs to Slack
 ------------------------------
 "The CTO is really jamming out right, now."
+
 "Yeah, it's the 'I want to dance like no one is watching, but I'm sitting and coding at my desk in the open office' vibe"
+
 "I wonder what they're listening to."
+
 "Um, Check the slack channel"
+
 <Switches to slack channel where the script is installed>
+  
 "Ooo. makes sense. It's TSwift, Shake It Off"
+
 -- True Story
 
 It's really fun to share what you're listening to in real time.  This is a little system to make that possible. Requires users to run a command to opt-in.
