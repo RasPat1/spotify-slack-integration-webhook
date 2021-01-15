@@ -1,16 +1,16 @@
 Publish Spotify songs to Slack
 ------------------------------
-"The CTO is really jamming out right, now."
+> The CTO is really jamming out right, now.
 
-"Yeah, it's the 'I want to dance like no one is watching, but I'm sitting and coding at my desk in the open office' vibe"
+> Yeah, it's the 'I want to dance, but I'm sitting in an open office' vibe
 
-"I wonder what they're listening to."
+> I wonder what they're listening to.
 
-"Um, Check the slack channel"
+> Um, Check the slack channel
 
-<Switches to slack channel where the script is installed>
+> -- Switches to slack channel where the script is installed
   
-"Ooo. makes sense. It's TSwift, Shake It Off"
+> OooooOOo. It's TSwift. #ShakeItOff Should have known...
 
 -- True Story
 
