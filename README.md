@@ -7,8 +7,6 @@ Publish Spotify songs to Slack
 > I wonder what they're listening to.
 
 > Um, Check the slack channel
-
-> -- Switches to slack channel where the script is installed
   
 > OooooOOo. It's TSwift. #ShakeItOff Should have known...
 
